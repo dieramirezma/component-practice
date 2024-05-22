@@ -2,7 +2,18 @@ import logo from './logo.svg';
 import './App.css';
 import { MyComponent } from './components/MyComponent';
 import { MySecondComponent } from './components/MySecondComponent';
+import { MyThirdComponent } from './components/MyThirdComponent';
+
+
 function App() {
+
+  const medicalRecord = {
+    height: 160,
+    weight: 70,
+    bloodType: "A+",
+    allergies: ["Pollen", "Dust", "Peanuts"]
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -10,8 +21,9 @@ function App() {
         <p>
           Estructura inicial del proyecto y limpia.
         </p>
-        <MySecondComponent />
         <MyComponent />   
+        <MySecondComponent />
+        <MyThirdComponent name={"Diego"} lastName={"Ramirez"} medicalRecord = {medicalRecord} />
       </header>
     </div>
   );
