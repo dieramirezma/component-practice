@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-
+import { MyComponent } from './components/MyComponent';
+import { MySecondComponent } from './components/MySecondComponent';
 function App() {
   return (
     <div className="App">
@@ -9,6 +10,8 @@ function App() {
         <p>
           Estructura inicial del proyecto y limpia.
         </p>
+        <MySecondComponent />
+        <MyComponent />   
       </header>
     </div>
   );
