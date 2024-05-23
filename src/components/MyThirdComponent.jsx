@@ -1,6 +1,6 @@
+import PropTypes from 'prop-types';
 
 export const MyThirdComponent = (props) => {
-  console.log(props);
 
   const { name, lastName, medicalRecord } = props;
   const { height, weight, bloodType, allergies } = medicalRecord;
@@ -19,3 +19,14 @@ export const MyThirdComponent = (props) => {
     </div>
   )
 };
+
+MyThirdComponent.propTypes = {
+  name: PropTypes.string.isRequired,
+  lastName: PropTypes.string.isRequired,
+  medicalRecord: PropTypes.shape({
+    height: PropTypes.number.isRequired,
+    weight: PropTypes.number.isRequired,
+    bloodType: PropTypes.string.isRequired,
+    allergies: PropTypes.arrayOf(PropTypes.string).isRequired
+  }).isRequired
+}
