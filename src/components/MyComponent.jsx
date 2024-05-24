@@ -29,5 +29,6 @@ export const MyComponent = () => {
       <p>Celular: {student.mobile}</p>
       <p>LinkedIn: {student.linkedin}</p>
       <hr />
-    </div>)
-};
+    </div>
+  )
+}

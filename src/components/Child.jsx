@@ -1,5 +1,4 @@
-export const Child = ({ name, setName, addMessage}) => {
-  
+export const Child = ({ name, setName, addMessage }) => {
   const names = ['Diego', 'Juan', 'Pedro', 'Maria']
 
   const sendMessage = () => {
@@ -7,11 +6,11 @@ export const Child = ({ name, setName, addMessage}) => {
     setName('Juan')
   }
 
-  const changeName = () => { 
+  const changeName = () => {
     const random = Math.floor(Math.random() * 4)
     setName(names[random])
   }
-  
+
   return (
     <div>
       {name}
@@ -20,5 +19,5 @@ export const Child = ({ name, setName, addMessage}) => {
         <button onClick={changeName}>Cambiar Nombre</button>
       </div>
     </div>
-  );
-};
+  )
+}
