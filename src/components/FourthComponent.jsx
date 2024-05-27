@@ -22,6 +22,15 @@ export const FourthComponent = () => {
   const handleMouseAlert = (e, action) => {
     alert(`Has ${action} ${e.target.id} con el evento onMouseEnter y onMouseLeave`)
   }
+
+  const insideInput = () => {
+    console.log('Estás dentro del input. Por favor escribe tu nombre')
+  }
+
+  const outsideInput = () => {
+    console.log('Estás fuera del input. Adios!')
+  }
+
   return (
     <div>
       <h2>Eventos en React</h2>
@@ -74,6 +83,14 @@ export const FourthComponent = () => {
       </div>
 
       {/* Evento Focus - Blur */}
+      <div>
+        <input
+          type='text'
+          onFocus={insideInput}
+          onBlur={outsideInput}
+          placeholder='Escribe tu nombre'
+        />
+      </div>
     </div>
   )
 }
